@@ -12,7 +12,16 @@ export default [
     name: 'app/files-to-ignore',
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
-
+  {
+    rules: {
+      'vue/no-undef-components': [
+        'error',
+        // {
+        //   ignorePatterns: [],
+        // },
+      ],
+    },
+  },
   js.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   skipFormatting,
